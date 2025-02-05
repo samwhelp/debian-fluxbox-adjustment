@@ -502,6 +502,9 @@ Mod1 Shift g :Exec pcmanfm-qt
 Mod1 Shift e :Exec featherpad
 
 
+#Mod1 Shift s :Exec system-settings
+
+
 Mod1 Shift m :Exec pavucontrol
 #Mod1 Shift m :Exec mate-volume-control
 
