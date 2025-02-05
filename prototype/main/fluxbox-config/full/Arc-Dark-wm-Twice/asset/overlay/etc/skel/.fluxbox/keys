@@ -382,16 +382,16 @@ Mod4 d :ShowDesktop
 ##
 
 
-## Root Menu
+## > toggle show root menu
 Mod1 F1 :RootMenu
 Mod4 space :RootMenu
 
 
-## Workspace Menu
+## > toggle show Workspace Menu
 Mod4 c :WorkspaceMenu
 
 
-## Window Menu
+## > toggle show window menu
 Mod1 space :WindowMenu
 
 
@@ -467,7 +467,7 @@ Mod1 Shift m :Exec pavucontrol
 ##
 
 
-## > open the window menu
+## > toggle show window menu
 #Mod1 space :WindowMenu
 
 
@@ -489,29 +489,29 @@ Mod4 w :Maximize
 
 
 
-## Window Minimize
+## > window minimize
 Mod4 x :Minimize
 #Mod4 n :Minimize
 
 
 
-## Window Toggle Shade
+## > window toggle shade
 Mod4 y :Shade
 
 
-## Window Toggle Decorations
+## > window toggle decorations
 Mod4 v :ToggleDecor
 
 
-## Window SetLayer Top
+## > window set layer to top
 Mod4 t :SetLayer Top
 
 
-## Window SetLayer Normal
+## > window set layer to normal
 Mod4 g :SetLayer Normal
 
 
-## Window SetLayer Bottom
+## > window set layer to bottom
 Mod4 b :SetLayer Bottom
 
 
