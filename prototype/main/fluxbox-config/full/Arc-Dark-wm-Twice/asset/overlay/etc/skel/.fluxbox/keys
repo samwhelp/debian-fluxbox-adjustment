@@ -113,7 +113,7 @@ OnWindow Mod4 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
 OnWindow Mod4 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing BottomRight}
 OnWindow Mod4 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
 
-## alt + middle click to lower the window
+## Win + mouse middle click on a window to lower window
 OnWindow Mod4 Mouse2 :Lower
 
 
@@ -143,6 +143,10 @@ OnWindow Mod4 Mouse2 :Lower
 
 OnTitlebar Mod4 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
 OnTitlebar Mod4 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing BottomRight}
+
+
+## > Win + mouse middle click on a window titlebar to lower window
+OnTitlebar Mod4 Mouse2 :Lower
 
 
 ##
@@ -202,8 +206,7 @@ OnTitlebar Mouse2 :StartTabbing
 OnTitlebar Control Mouse1 :StartTabbing
 
 
-## > mouse middle click on a window titlebar to lower
-OnTitlebar Mouse2 :Lower
+
 
 
 ##
