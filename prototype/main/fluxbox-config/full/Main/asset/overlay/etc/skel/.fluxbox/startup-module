@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+
+##
+## ## Init
+##
+
+REF_BASE_DIR_PATH="$(cd -- "$(dirname -- "${0}")" ; pwd)"
+REF_PLAN_DIR_PATH="${REF_BASE_DIR_PATH}"
+#echo "${THE_BASE_DIR_PATH}"
