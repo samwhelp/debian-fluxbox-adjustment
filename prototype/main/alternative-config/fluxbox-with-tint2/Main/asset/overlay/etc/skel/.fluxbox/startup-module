@@ -228,12 +228,12 @@ mod_bluetooth_applet_start_use_blueman_applet () {
 
 mod_component_panel_start_portal () {
 
-	mod_component_panel_start_portal_use_tint2
+	mod_component_panel_start_use_tint2
 
 	return 0
 }
 
-mod_component_panel_start_portal_use_tint2 () {
+mod_component_panel_start_use_tint2 () {
 
 	local tint2_dir_path="${REF_MASTER_STYLE_DIR_PATH}/tint2"
 
@@ -243,6 +243,35 @@ mod_component_panel_start_portal_use_tint2 () {
 
 		tint2 -c "${tint2_dir_path}/top_bottom_panel/tint2rc_top" &
 		tint2 -c "${tint2_dir_path}/top_bottom_panel/tint2rc_bottom" &
+
+	fi
+
+	return 0
+}
+
+
+
+
+##
+## ## Module / Component / panel
+##
+
+mod_component_compositor_start_portal () {
+
+	mod_component_compositor_start_use_picom
+
+	return 0
+}
+
+mod_component_compositor_start_use_picom () {
+
+	local picom_dir_path="${REF_MASTER_STYLE_DIR_PATH}/picom"
+
+	util_stop_all picom
+
+	if is_command_exist picom; then
+
+		picom --config "${picom_dir_path}/picom.conf" &
 
 	fi
 
@@ -270,6 +299,10 @@ model_start () {
 
 	mod_component_panel_start_portal
 
+	mod_component_compositor_start_portal
+
+
+
 
 	##
 	## ## Applet
@@ -280,7 +313,6 @@ model_start () {
 	mod_network_applet_start_portal
 
 	mod_bluetooth_applet_start_portal
-
 
 
 
