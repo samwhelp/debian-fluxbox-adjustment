@@ -327,9 +327,9 @@ model_start () {
 
 	#mod_component_panel_start_portal
 
-	mod_component_compositor_start_portal
+	#mod_component_compositor_start_portal
 
-	mod_component_xsettings_start_portal
+	#mod_component_xsettings_start_portal
 
 
 
