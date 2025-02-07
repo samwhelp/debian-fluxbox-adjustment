@@ -13,6 +13,10 @@
 
 fluxbox
 
+rofi
+
+feh
+
 tint2
 
 picom

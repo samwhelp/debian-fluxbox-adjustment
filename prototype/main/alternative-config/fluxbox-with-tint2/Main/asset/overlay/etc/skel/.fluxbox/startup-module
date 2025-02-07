@@ -140,14 +140,14 @@ REF_MASTER_STYLE_DIR_PATH="${REF_MAIN_HELPER_DIR_PATH}/${REF_MASTER_STYLE_DIR_NA
 ## ## Module / Applet / policykit
 ##
 
-mod_policykit_start_portal () {
+mod_component_policykit_start_portal () {
 
-	mod_policykit_start_use_lxqt_policykit_agent
+	mod_component_policykit_start_use_lxqt_policykit_agent
 
 	return 0
 }
 
-mod_policykit_start_use_lxqt_policykit_agent () {
+mod_component_policykit_start_use_lxqt_policykit_agent () {
 
 	util_stop_all lxqt-policykit-agent
 
@@ -158,17 +158,17 @@ mod_policykit_start_use_lxqt_policykit_agent () {
 
 
 ##
-## ## Module / Applet / volume_control_applet
+## ## Module / Applet / volume_control
 ##
 
-mod_volume_control_applet_start_portal () {
+mod_applet_volume_control_start_portal () {
 
-	mod_volume_control_applet_start_use_mate_volume_control_status_icon
+	mod_applet_volume_control_start_use_mate_volume_control_status_icon
 
 	return 0
 }
 
-mod_volume_control_applet_start_use_mate_volume_control_status_icon () {
+mod_applet_volume_control_start_use_mate_volume_control_status_icon () {
 
 	util_stop_all mate-volume-control-status-icon
 
@@ -179,17 +179,17 @@ mod_volume_control_applet_start_use_mate_volume_control_status_icon () {
 
 
 ##
-## ## Module / Applet / network_applet
+## ## Module / Applet / network_manager
 ##
 
-mod_network_applet_start_portal () {
+mod_applet_network_manager_start_portal () {
 
-	mod_network_applet_start_use_nm_applet
+	mod_applet_network_manager_start_use_nm_applet
 
 	return 0
 }
 
-mod_network_applet_start_use_nm_applet () {
+mod_applet_network_manager_start_use_nm_applet () {
 
 	util_stop_all nm-applet
 
@@ -200,17 +200,17 @@ mod_network_applet_start_use_nm_applet () {
 
 
 ##
-## ## Module / Applet / bluetooth_applet
+## ## Module / Applet / bluetooth_manager
 ##
 
-mod_bluetooth_applet_start_portal () {
+mod_applet_bluetooth_manager_start_portal () {
 
-	mod_bluetooth_applet_start_use_blueman_applet
+	mod_applet_bluetooth_manager_start_use_blueman_applet
 
 	return 0
 }
 
-mod_bluetooth_applet_start_use_blueman_applet () {
+mod_applet_bluetooth_manager_start_use_blueman_applet () {
 
 	util_stop_all blueman-applet
 
@@ -295,7 +295,7 @@ model_start () {
 	## ## Component
 	##
 
-	mod_policykit_start_portal
+	mod_component_policykit_start_portal
 
 	mod_component_panel_start_portal
 
@@ -308,11 +308,11 @@ model_start () {
 	## ## Applet
 	##
 
-	mod_volume_control_applet_start_portal
+	mod_applet_volume_control_start_portal
 
-	mod_network_applet_start_portal
+	mod_applet_network_manager_start_portal
 
-	mod_bluetooth_applet_start_portal
+	mod_applet_bluetooth_manager_start_portal
 
 
 
