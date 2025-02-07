@@ -57,8 +57,9 @@ session.screen0.toolbar.layer:	Dock
 session.screen0.toolbar.maxOver:	false
 session.screen0.toolbar.onhead:	1
 session.screen0.toolbar.placement:	BottomCenter
-session.screen0.toolbar.tools:	prevworkspace, workspacename, nextworkspace, iconbar, prevwindow, nextwindow, clock, systemtray
-session.screen0.toolbar.visible:	true
+#session.screen0.toolbar.tools:	prevworkspace, workspacename, nextworkspace, iconbar, prevwindow, nextwindow, clock, systemtray
+session.screen0.toolbar.tools:	prevworkspace, workspacename, nextworkspace, iconbar, prevwindow, nextwindow, clock
+session.screen0.toolbar.visible:	false
 session.screen0.toolbar.widthPercent:	80
 session.screen0.tooltipDelay:	500
 session.screen0.window.focus.alpha:	240

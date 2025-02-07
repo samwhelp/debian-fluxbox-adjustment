@@ -124,7 +124,20 @@ util_stop_all_by_killall () {
 
 
 ##
-## ## Module / Start / policykit
+## ## Main / Path
+##
+
+REF_MAIN_HELPER_DIR_NAME="helper"
+REF_MAIN_HELPER_DIR_PATH="${REF_PLAN_DIR_PATH}/${REF_MAIN_HELPER_DIR_NAME}"
+
+REF_MASTER_STYLE_DIR_NAME="style"
+REF_MASTER_STYLE_DIR_PATH="${REF_MAIN_HELPER_DIR_PATH}/${REF_MASTER_STYLE_DIR_NAME}"
+
+
+
+
+##
+## ## Module / Applet / policykit
 ##
 
 mod_policykit_start_portal () {
@@ -145,7 +158,7 @@ mod_policykit_start_use_lxqt_policykit_agent () {
 
 
 ##
-## ## Module / Start / volume_control_applet
+## ## Module / Applet / volume_control_applet
 ##
 
 mod_volume_control_applet_start_portal () {
@@ -166,7 +179,7 @@ mod_volume_control_applet_start_use_mate_volume_control_status_icon () {
 
 
 ##
-## ## Module / Start / network_applet
+## ## Module / Applet / network_applet
 ##
 
 mod_network_applet_start_portal () {
@@ -187,7 +200,7 @@ mod_network_applet_start_use_nm_applet () {
 
 
 ##
-## ## Module / Start / bluetooth_applet
+## ## Module / Applet / bluetooth_applet
 ##
 
 mod_bluetooth_applet_start_portal () {
@@ -210,18 +223,67 @@ mod_bluetooth_applet_start_use_blueman_applet () {
 
 
 ##
+## ## Module / Component / panel
+##
+
+mod_component_panel_start_portal () {
+
+	mod_component_panel_start_portal_use_tint2
+
+	return 0
+}
+
+mod_component_panel_start_portal_use_tint2 () {
+
+	local tint2_dir_path="${REF_MASTER_STYLE_DIR_PATH}/tint2"
+
+	util_stop_all tint2
+
+	if is_command_exist tint2; then
+
+		tint2 -c "${tint2_dir_path}/top_bottom_panel/tint2rc_top" &
+		tint2 -c "${tint2_dir_path}/top_bottom_panel/tint2rc_bottom" &
+
+	fi
+
+	return 0
+}
+
+
+
+
+
+
+
+##
 ## ## Model / Start
 ##
 
 model_start () {
 
+
+	##
+	## ## Component
+	##
+
 	mod_policykit_start_portal
+
+	mod_component_panel_start_portal
+
+
+	##
+	## ## Applet
+	##
 
 	mod_volume_control_applet_start_portal
 
 	mod_network_applet_start_portal
 
 	mod_bluetooth_applet_start_portal
+
+
+
+
 
 	return 0
 }
