@@ -8,6 +8,27 @@
 
 
 ##
+## ## Package / Fluxbox
+##
+
+fluxbox
+
+tint2
+
+picom
+
+xsettingsd
+
+obsession
+
+mate-media
+
+lxqt-policykit
+
+
+
+
+##
 ## ## Package / Tool
 ##
 
