@@ -369,17 +369,72 @@ OnRightGrip Move1 :StartResizing bottomright
 ### Head: System / Leave
 ##
 
+## > exit
+Control Alt Delete :Exit
+
+
+## > suspend
+Mod1 Control z :Exec obsession-exit --suspend
+
 
 ## > shutdown
-Mod1 Shift z :Exec systemctl halt
+#Mod1 Shift z :Exec systemctl halt
+Mod1 Shift z :Exec obsession-logout
+#Mod1 Shift z :Exec obsession-exit --poweroff
 
 
 ## > logout
-Mod1 Shift x :Exit
+#Mod1 Shift x :Exit
+Mod1 Shift x :Exec obsession-logout
 
 
 ## > reconfigure
 Mod1 Shift c :Reconfigure
+
+
+## > restart
+Mod1 Control c :Restart
+
+
+
+
+##
+## ## obsession
+##
+## run to install obsession
+##
+## ``` sh
+## sudo apt-get install obsession
+## ```
+##
+
+
+##
+## ## obsession-exit
+##
+## run
+##
+## ``` sh
+## obsession-exit --help
+## ```
+##
+## show
+##
+## ```
+## Usage:
+##   obsession-exit [OPTION?]
+##
+## Help Options:
+##   -h, --help             Show help options
+##
+## Application Options:
+##   -p, --poweroff         Shutdown the computer
+##   -s, --suspend          Suspend the computer
+##   -H, --hibernate        Go to Hibernation
+##   -r, --reboot           Restart the computer
+##   -c, --capabilities     List power capabilities
+## ```
+##
 
 
 ##
