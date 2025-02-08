@@ -740,6 +740,54 @@ Shift Mod4 9 :TakeToWorkspace 9
 
 
 ################################################################################
+### Head: Screenshot / screengrab
+##
+
+
+##
+## screengrab
+##
+## run
+##
+## ``` sh
+## screengrab -h
+## ```
+##
+## show
+##
+## ```
+## Usage: screengrab [options]
+## ScreenGrab is a crossplatform application for fast creating screenshots of your desktop.
+##
+## Options:
+##   -h, --help        Displays help on commandline options.
+##   --help-all        Displays help including Qt specific options.
+##   -v, --version     Displays version information.
+##   -f, --fullscreen  Take a fullscreen screenshot
+##   -a, --active      Take a screenshot of the active window
+##   -r, --region      Take a screenshot of a selection of the screen
+##   -m, --minimized   Run the application with a hidden main window
+## ```
+##
+
+
+Print :Exec screengrab --fullscreen
+
+Mod4 Print :Exec screengrab --active
+
+Control Print :Exec screengrab --region
+
+Alt Print :Exec screengrab
+
+
+##
+### Tail: Screenshot / screengrab
+################################################################################
+
+
+
+
+################################################################################
 ### Head: Screen Bright / brightnessctl
 ##
 
