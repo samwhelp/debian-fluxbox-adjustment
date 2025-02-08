@@ -1003,7 +1003,18 @@ Mod1 KP_0 :ToggleCmd {Maximize} {Restore}
 
 
 ##
-## screengrab
+## ## screengrab
+##
+## run to install screengrab
+##
+## ``` sh
+## sudo apt-get install screengrab
+## ```
+##
+
+
+##
+## ## screengrab
 ##
 ## run
 ##
@@ -1050,6 +1061,17 @@ Alt Print :Exec screengrab
 ##
 
 
+##
+## ## brightnessctl
+##
+## run to install brightnessctl
+##
+## ``` sh
+## sudo apt-get install brightnessctl
+## ```
+##
+
+
 XF86_MonBrightnessDown :Exec brightnessctl set +5%
 
 XF86_MonBrightnessUp :Exec brightnessctl set 5%-
@@ -1072,6 +1094,15 @@ Mod1 Shift bracketleft :Exec brightnessctl set 5%-
 ##
 
 
+##
+## ## amixer
+##
+## run to install pamixer
+##
+## ``` sh
+## sudo apt-get install alsa-utils
+## ```
+##
 
 
 ##
@@ -1134,6 +1165,15 @@ Mod1 Control comma :Exec amixer -q -D pulse sset Master 1%- unmute
 ##
 
 
+##
+## ## pamixer
+##
+## run to install pamixer
+##
+## ``` sh
+## sudo apt-get install pamixer
+## ```
+##
 
 
 ##
