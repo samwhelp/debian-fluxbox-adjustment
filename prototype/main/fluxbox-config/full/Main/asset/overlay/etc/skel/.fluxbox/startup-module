@@ -310,6 +310,35 @@ mod_component_xsettings_start_use_xsettingsd () {
 
 
 
+##
+## ## Module / Component / wallpaper
+##
+
+mod_component_wallpaper_start_portal () {
+
+	return 0
+
+	mod_component_wallpaper_start_use_fbsetbg
+
+	return 0
+}
+
+mod_component_wallpaper_start_use_fbsetbg () {
+
+	util_stop_all fbsetbg
+
+	if is_command_exist fbsetbg; then
+
+		fbsetbg "/usr/share/backgrounds/default.jpg" &
+
+	fi
+
+	return 0
+}
+
+
+
+
 
 
 ##
@@ -330,6 +359,8 @@ model_start () {
 	mod_component_compositor_start_portal
 
 	mod_component_xsettings_start_portal
+
+	mod_component_wallpaper_start_portal
 
 
 
