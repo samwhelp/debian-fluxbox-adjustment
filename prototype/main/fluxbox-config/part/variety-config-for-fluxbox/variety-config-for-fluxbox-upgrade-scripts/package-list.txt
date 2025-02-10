@@ -12,3 +12,12 @@
 ##
 
 fluxbox
+
+
+
+
+##
+## ## Package / variety
+##
+
+variety
