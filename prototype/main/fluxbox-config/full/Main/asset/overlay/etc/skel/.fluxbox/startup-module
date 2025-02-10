@@ -398,9 +398,9 @@ model_start_by_custom () {
 	## ## Component
 	##
 
-	mod_component_policykit_start_portal
-
 	mod_component_wallpaper_start_portal
+
+	mod_component_policykit_start_portal
 
 	#mod_component_panel_start_portal
 
@@ -435,9 +435,9 @@ model_start_by_xdg_autostart_extra () {
 	## ## Component
 	##
 
-	mod_component_policykit_start_portal
-
 	mod_component_wallpaper_start_portal
+
+	mod_component_policykit_start_portal
 
 	#mod_component_panel_start_portal
 
